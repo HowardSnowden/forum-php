@@ -9,10 +9,10 @@ include_once ('include/Logger.inc');
 class Db {
     public static function getDb() {
         try {
-            $dbname = dem3apkat0rsil;
-            $host = ec2-107-20-191-205.compute-1.amazonaws.com;
-            $username= bgfrrwicnefcce;
-            $password = D5XoyMffVemfkFRp8eb5TXjvor;
+   $dbname = 'dem3apkat0rsil';
+            $host = 'ec2-107-20-191-205.compute-1.amazonaws.com';
+            $username= 'bgfrrwicnefcce';
+            $password = 'D5XoyMffVemfkFRp8eb5TXjvor';
             // see if we need to create tables
             
             $db = new PDO("pgsql:dbname=$dbname;host=$host", $username, $password );
@@ -27,10 +27,11 @@ class Db {
             if ($query == false){
                 $makeDb = true;
             }
+        
             if ($makeDb) {
                 self::makeTables($db);
                 self::populateTables($db);
-            }
+            }}
 
         } catch (PDOException $e) {
             die("Could not open database. " . $e -> getMessage());
