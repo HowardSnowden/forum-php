@@ -9,11 +9,13 @@ include_once ('include/Logger.inc');
 class Db {
     public static function getDb() {
         try {
-            $fileName = "Questions.db3";
-
+            $dbname = dem3apkat0rsil;
+            $host = ec2-107-20-191-205.compute-1.amazonaws.com;
+            $username= bgfrrwicnefcce;
+            $password = D5XoyMffVemfkFRp8eb5TXjvor;
             // see if we need to create tables
-            $makeDb = !file_exists($fileName);
-            $db = new PDO("sqlite:${fileName}");
+            
+            $db = new PDO("pgsql:dbname=$dbname;host=$host", $username, $password );
 
             // force exceptions for better debugging.
             $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -21,7 +23,10 @@ class Db {
             // force cascading deletes on foreign key constraints
             $st = $db -> prepare("PRAGMA foreign_keys = ON");
             $st -> execute();
-
+            $query = $db ->query("SELECT post FROM answers");
+            if ($query == false){
+                $makeDb = true;
+            }
             if ($makeDb) {
                 self::makeTables($db);
                 self::populateTables($db);
