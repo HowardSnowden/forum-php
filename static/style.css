@@ -1,0 +1,138 @@
+/** stylesheet taken from MVC-Template by Scott Sharkey (cs.franklin.edu/~sharkesc/webd236), some modifications made **/
+.content {
+    width: 800px;
+    margin: 0 auto;
+    padding: 0px 20px 20px;
+    background: white;
+    border: 2px solid navy;
+}
+h1 {
+    color: navy;
+    clear:both;
+}
+
+h2{
+clear:both;
+}
+.inputs {
+    padding: 1em;
+}
+.inputs label {
+    display: block;
+}
+.inputs input[type='text'] {
+    width: 100%;
+}
+.inputs input[type='submit']{
+    margin-top:10px;
+}
+textarea {
+    width: 100%;
+    overflow:auto;
+
+}
+.display {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    
+    
+}
+.display label {
+    width: 5em;
+    padding-right: 1em;
+    
+}
+
+div.posts{
+    border-style:solid;
+    padding: 10px;
+    margin: 5px;
+}
+
+.value{
+    float:right;
+    
+}
+
+.user{
+    width:300px;
+    background:  #E0E0E0;
+}
+
+.debug {
+    background-color: yellow;
+    display: block;
+    clear: both;
+    white-space: pre;
+    font-family: monospace;
+}
+.highlight {
+    background-color: #E0E0E0;
+    display: block;
+    clear: both;
+}
+.clearboth {
+	clear: both;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+.welcome{
+    margin-top:5px;
+    float:left;
+    
+}
+
+.login {
+    display:inline;
+    float:right;
+    padding:1px;
+    text-decoration:none;
+    font-size: 1.2em;
+    margin-top:10px;
+
+    
+}
+
+a:hover{
+    background-color:yellow;
+}
+.login a{
+    text-decoration:none;
+    color:white;
+    background-color:navy;
+    padding:5px;
+}
+
+.login a:hover{
+    background-color:blue;
+}
+    
+table {
+    border-width: 4px 4px 4px 4px;
+    border-spacing: 1px;
+    border-style: solid solid solid solid;
+    border-color: gray gray gray gray;
+    border-collapse: collapse;
+    background-color: white;
+    width: 100%;
+}
+th {
+    border-width: 3px 3px 3px 3px;
+    padding: 3px 3px 3px 3px;
+    border-style: solid solid solid solid;
+    border-color: gray gray gray gray;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    background-color: #eeeeee;
+}
+td {
+    border-width: 3px 3px 3px 3px;
+    padding: 3px 3px 3px 3px;
+    border-style: solid solid solid solid;
+    border-color: gray gray gray gray;
+    vertical-align: top;
+}
+hr {
+	margin-bottom: 20px;
+	margin-top: 20px;
+}

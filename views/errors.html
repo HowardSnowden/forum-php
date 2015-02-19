@@ -1,0 +1,8 @@
+[[ if (isset($errors)) : ]]
+    <p>Please correct the following errors:</p>
+    <ul>
+[[   foreach ($errors as $error) : ]]
+        <li>{{$error}}</li>
+[[   endforeach; ]]
+    </ul>
+[[ endif; ]]

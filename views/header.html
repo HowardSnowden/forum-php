@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{$title}}</title>
+        <link rel="stylesheet" href="@@static/style.css@@" />
+    </head>
+    
+    
+    <body>
+        
+        <div class="content">
+            [[  include_once 'include/util.inc';
+                include_once 'models/user.inc';
+                include_once 'models/forum.inc';
+                include_once 'models/answers.inc';
+                include_once 'include/Authenticator.inc';
+            ]]
+
+    [[ if (isLoggedIn()) : ]]
+    <div class="welcome">
+    Welcome, {{User::findById($_SESSION['userid'])->getFullName()}}</div>
+    [[ if (Authenticator::instance()->can('admin_page')) : ]]
+    <p class="login"><a href="@@admin@@">Admin</a></p>
+  [[ endif; ]]
+    <p class='login'><a href='@@index@@'>Home</a></p>
+    <p class='login'><a href="@@user/view/{{User::findById($_SESSION['userid'])->getId()}}@@">My Profile</a></p>
+    <p class='login'><a href='@@logout@@'>Log Out</a></p>
+[[ else : ]]
+    <p class='login'><a href='@@index@@'>Home</a></p>
+    <p class='login'><a href='@@register@@'>Register</a></p>
+    <p class='login'><a href='@@login@@'>Log in</a></p>
+[[ endif; ]]
