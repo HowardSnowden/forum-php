@@ -9,7 +9,7 @@ include_once ('include/Logger.inc');
 class Db {
     public static function getDb() {
         try {
-   $dbname = 'd40oh58uoj0at';
+   $dbname = ***REMOVED***;
             $host = 'ec2-107-21-93-97.compute-1.amazonaws.com';
             $username= ***REMOVED***;
             $password = ***REMOVED***;
