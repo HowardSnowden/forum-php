@@ -49,10 +49,10 @@ class Db {
               email text NOT NULL,
               first_name text NOT NULL,
               last_name text NOT NULL,
-              password text NOT NULL,
+              password text NOT NULL
               
             )",
-                 "CREATE TABLE groups (
+                "CREATE TABLE groups (
                 id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                 name TEXT NOT NULL
             )",
