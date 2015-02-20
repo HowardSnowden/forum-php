@@ -18,7 +18,7 @@ class Db {
             $db = new PDO("pgsql:host=$host; port=5432;dbname=$dbname;user=$username;password=$password");
 
             // force exceptions for better debugging.
-            $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION, PDO::ATTR_PERSISTENT=>TRUE);
+            $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
             // force cascading deletes on foreign key constraints
             
