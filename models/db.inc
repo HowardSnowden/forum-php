@@ -43,14 +43,16 @@ class Db {
         Logger::instance() -> info("Creating tables");
         // @formatter:off
         $statements = array( 
-            "CREATE TABLE user (
-                 id INTEGER PRIMARY KEY,
-                 email VARCHAR(50) NOT NULL,
-                 password VARCHAR(50) NOT NULL,
-                 first_name VARCHAR(50) NOT NULL,
-                 last_name VARCHAR(50) NOT NULL
+            "CREATE TABLE 'user'
+            (
+              id serial NOT NULL,
+              'e-mail' text,
+              first_name text,
+              last_name text,
+              password text,
+              CONSTRAINT user_pk PRIMARY KEY (id)
             )",
-            "CREATE TABLE groups (
+                 "CREATE TABLE groups (
                 id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                 name TEXT NOT NULL
             )",
