@@ -28,7 +28,7 @@ class Db {
         //    if ($query == false){
          //       $makeDb = true;
            // }
-        $makeDb = true;
+        
             if ($makeDb) {
                 self::makeTables($db);
                 self::populateTables($db);
