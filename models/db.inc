@@ -53,17 +53,17 @@ class Db {
               
             )",
                 "CREATE TABLE groups (
-                id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+                id serial PRIMARY KEY,
                 name TEXT NOT NULL
             )",
             "CREATE TABLE permissions (
-                id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+                id serial PRIMARY KEY,
                 name TEXT NOT NULL
             )",
             "CREATE TABLE usergroups (
                 userId INTEGER NOT NULL,
                 groupId INTEGER NOT NULL,
-                FOREIGN KEY(userId) REFERENCES user(id) ON DELETE CASCADE,
+                FOREIGN KEY(userId) REFERENCES users(id) ON DELETE CASCADE,
                 FOREIGN KEY(groupId) REFERENCES groups(id) ON DELETE CASCADE
             )",
             "CREATE TABLE grouppermissions (
@@ -73,13 +73,13 @@ class Db {
                 FOREIGN KEY(groupId) REFERENCES groups(id) ON DELETE CASCADE
             )",
             "CREATE TABLE QUESTIONS(
-            id INTEGER PRIMARY KEY NOT NULL,       
+            id serial PRIMARY,       
             post_date DATE NOT NULL,       
             title CHAR NOT NULL,       
             post CHAR NOT NULL,
             tags CHAR,       
             user_id INTEGER,       
-            FOREIGN KEY(user_id) REFERENCES USER(id) ON DELETE CASCADE       
+            FOREIGN KEY(user_id) REFERENCES USERS(id) ON DELETE CASCADE       
             );",
             "CREATE TABLE ANSWERS(
                id INTEGER PRIMARY KEY NOT NULL,        
@@ -87,13 +87,13 @@ class Db {
                post VARCHAR NOT NULL,        
                user_id INTEGER NOT NULL,        
                post_id INTEGER NOT NULL,     
-               FOREIGN KEY(user_id) REFERENCES USER(id) ON DELETE CASCADE,       
+               FOREIGN KEY(user_id) REFERENCES USERS(id) ON DELETE CASCADE,       
                FOREIGN KEY (post_id) REFERENCES QUESTIONS(id) ON DELETE CASCADE
            
 );",
 
                 "CREATE TABLE file (
-                id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+                id serial PRIMARY KEY,
                 dir VARCHAR(150) NOT NULL,
                 origName VARCHAR(50) NOT NULL,
                 nameOnDisk VARCHAR(50) NOT NULL,
