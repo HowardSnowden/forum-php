@@ -73,7 +73,7 @@ class Db {
                 FOREIGN KEY(groupId) REFERENCES groups(id) ON DELETE CASCADE
             )",
             "CREATE TABLE QUESTIONS(
-            id serial PRIMARY,       
+            id serial PRIMARY KEY,       
             post_date DATE NOT NULL,       
             title CHAR NOT NULL,       
             post CHAR NOT NULL,
