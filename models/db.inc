@@ -43,8 +43,8 @@ class Db {
         Logger::instance() -> info("Creating tables");
         // @formatter:off
         $statements = array( 
-            "CREATE TABLE user (
-                id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+            "CREATE TABLE IF NOT EXISTS user (
+                id serial PRIMARY KEY,
                 email TEXT NOT NULL,
                 password TEXT NOT NULL,
                 first_name TEXT NOT NULL,
