@@ -1,5 +1,5 @@
 <?php
-require_once "models/Db.inc";
+require_once "models/db.inc";
 require_once "include/util.inc";
 
 //Class code taken from ToDoUpload example by Scott Sharkey cs.franklin.edu/~sharkesc
