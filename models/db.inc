@@ -44,12 +44,12 @@ class Db {
         // @formatter:off
         $statements = array( 
             "CREATE TABLE user (
-                id bigserial primary key,
-                email TEXT NOT NULL,
-                password TEXT NOT NULL,
-                first_name TEXT NOT NULL,
-                last_name TEXT NOT NULL
-            );",
+                'id' bigserial primary key,
+                'email' TEXT NOT NULL,
+                'password' TEXT NOT NULL,
+                'first_name' TEXT NOT NULL,
+                'last_name' TEXT NOT NULL
+            )",
             "CREATE TABLE groups (
                 id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                 name TEXT NOT NULL
