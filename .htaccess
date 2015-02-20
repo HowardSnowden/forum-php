@@ -1,4 +1,4 @@
-<IfModule mod_rewrite.c>
+
 Options +FollowSymLinks
 IndexIgnore */*
 # Turn on the RewriteEngine
@@ -8,5 +8,4 @@ RewriteCond %{HTTPS} !on
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /urlrouter.php
-</IfModule>
+RewriteRule . urlrouter.php
