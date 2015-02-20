@@ -52,27 +52,27 @@ class Db {
               password text NOT NULL
               
             )",
-                "CREATE TABLE groups (
+                "CREATE TABLE IF NOT EXISTS groups (
                 id serial PRIMARY KEY,
                 name TEXT NOT NULL
             )",
-            "CREATE TABLE permissions (
+            "CREATE TABLE IF NOT EXISTS permissions (
                 id serial PRIMARY KEY,
                 name TEXT NOT NULL
             )",
-            "CREATE TABLE usergroups (
+            "CREATE TABLE IF NOT EXISTS usergroups (
                 userId INTEGER NOT NULL,
                 groupId INTEGER NOT NULL,
                 FOREIGN KEY(userId) REFERENCES users(id) ON DELETE CASCADE,
                 FOREIGN KEY(groupId) REFERENCES groups(id) ON DELETE CASCADE
             )",
-            "CREATE TABLE grouppermissions (
+            "CREATE TABLE IF NOT EXISTS grouppermissions (
                 permissionId INTEGER NOT NULL,
                 groupId INTEGER NOT NULL,
                 FOREIGN KEY(permissionId) REFERENCES permissions(id) ON DELETE CASCADE,
                 FOREIGN KEY(groupId) REFERENCES groups(id) ON DELETE CASCADE
             )",
-            "CREATE TABLE QUESTIONS(
+            "CREATE TABLE IF NOT EXISTS QUESTIONS(
             id serial PRIMARY KEY,       
             post_date DATE NOT NULL,       
             title CHAR NOT NULL,       
@@ -81,7 +81,7 @@ class Db {
             user_id INTEGER,       
             FOREIGN KEY(user_id) REFERENCES USERS(id) ON DELETE CASCADE       
             );",
-            "CREATE TABLE ANSWERS(
+            "CREATE TABLE IF NOT EXISTS ANSWERS(
                id INTEGER PRIMARY KEY NOT NULL,        
                post_date DATE  NOT NULL,       
                post VARCHAR NOT NULL,        
@@ -92,7 +92,7 @@ class Db {
            
 );",
 
-                "CREATE TABLE file (
+                "CREATE TABLE IF NOT EXISTS file (
                 id serial PRIMARY KEY,
                 dir VARCHAR(150) NOT NULL,
                 origName VARCHAR(50) NOT NULL,
