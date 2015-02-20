@@ -21,8 +21,7 @@ class Db {
             $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // force cascading deletes on foreign key constraints
-            $st = $db -> prepare("PRAGMA foreign_keys = ON");
-            $st -> execute();
+            
             $query = $db ->query("SELECT post FROM answers");
             if ($query == false){
                 $makeDb = true;
