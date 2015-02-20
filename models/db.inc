@@ -22,7 +22,7 @@ class Db {
 
             // force cascading deletes on foreign key constraints
             
-            $query = $db ->query("SELECT post FROM answers");
+            $query = $db ->query("SELECT 1 FROM 'table'");
             if ($query == false){
                 $makeDb = true;
             }
