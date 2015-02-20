@@ -46,10 +46,10 @@ class Db {
             "CREATE TABLE users
             (
               id serial NOT NULL,
-              e-mail text,
-              first_name text,
-              last_name text,
-              password text,
+              email text NOT NULL,
+              first_name text NOT NULL,
+              last_name text NOT NULL,
+              password text NOT NULL,
               CONSTRAINT user_pk PRIMARY KEY (id)
             )",
                  "CREATE TABLE groups (
