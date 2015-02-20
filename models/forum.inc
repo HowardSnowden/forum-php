@@ -91,7 +91,7 @@ public function setUserId($user_id){
 	$st -> execute();
     
     $rows = $st -> fetchAll(PDO::FETCH_ASSOC);
-     $db=null;
+     
     return self::fromRows($rows);
      
  }

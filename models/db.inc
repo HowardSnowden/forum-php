@@ -166,7 +166,7 @@ class Db {
         $ge->addUser($u);
         foreach ($adminperms as $name) {
             $ga -> addPermission($permissions[$name]);
-        }
+        }h
 
     }
 }
