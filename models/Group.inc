@@ -2,7 +2,7 @@
 include_once 'models/Model.inc';
 include_once 'models/user.inc';
 include_once 'models/Permission.inc';
-include_once 'models/Validator.inc';
+include_once 'models/validator.inc';
 
 //Class code taken from RBAC example by Scott Sharkey cs.franklin.edu/~sharkesc
 class Group extends Model {
