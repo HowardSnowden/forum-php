@@ -21,9 +21,8 @@ class Db {
             $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // force cascading deletes on foreign key constraints
-            $st = $db -> prepare("PRAGMA foreign_keys = ON");
-            $st -> execute();
-            $query = $db ->query("SELECT 1 FROM 'table'");
+            
+            $query = $db ->query("SELECT * FROM user");
             if ($query == false){
                 $makeDb = true;
             }
@@ -131,7 +130,7 @@ class Db {
         Logger::instance() -> info("Creating default Users group.");
         $g = new Group( array('name' => 'Users'));
         $g -> insert();
-        $u = new User( array('first_name' => 'Damien', 'last_name' => 'Pyles', 'email' => 'rikari@insight.rr.com', 'password' =>    'Bastard4!'));
+        $u = new User( array('first_name' => 'Damien', 'last_name' => 'Pyles', 'email' => 'rikari@insight.rr.com', 'password' =>    'JambaJuice!'));
         $u->insert();
         $g->addUser($u);
         foreach ($userperms as $name) {
