@@ -43,7 +43,7 @@ class Db {
         Logger::instance() -> info("Creating tables");
         // @formatter:off
         $statements = array( 
-            "CREATE TABLE user
+            "CREATE TABLE users
             (
               id serial NOT NULL,
               e-mail text,
