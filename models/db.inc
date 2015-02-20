@@ -15,7 +15,7 @@ class Db {
             $password = 'D5XoyMffVemfkFRp8eb5TXjvor';
             // see if we need to create tables
             
-            $db = new PDOnew PDO("pgsql:host=$host; port=5432;dbname=$dbname;user=$username;password=$password");
+            $db = new PDO("pgsql:host=$host; port=5432;dbname=$dbname;user=$username;password=$password");
 
             // force exceptions for better debugging.
             $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
