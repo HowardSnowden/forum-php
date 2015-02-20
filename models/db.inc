@@ -21,7 +21,7 @@ class Db {
             $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // force cascading deletes on foreign key constraints
-            
+            er
             $query = $db ->query("SELECT * FROM user");
             if ($query == false){
                 $makeDb = true;

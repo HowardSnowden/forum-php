@@ -1,5 +1,5 @@
 <?php
-include_once "models/Db.inc";
+include_once "models/db.inc";
 include_once "models/Permission.inc";
 include_once "include/util.inc";
 //Class code taken from authenticator example by Scott Sharkey cs.franklin.edu/~sharkesc

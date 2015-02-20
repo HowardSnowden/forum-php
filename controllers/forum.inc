@@ -4,7 +4,7 @@ include_once "models/forum.inc";
 include_once "models/user.inc";
 include_once "models/answers.inc";
 include_once "models/validator.inc";
-include_once "models/file.inc";
+include_once "models/File.inc";
 include_once "include/Authenticator.inc";
 //This controller is based on MVC-Template by Scott Sharkey (cs.franklin.edu/~sharkesc/webd236)
 //Handles displaying the index and routing to various forum functions
