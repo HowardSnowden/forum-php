@@ -32,7 +32,8 @@ class Db {
                 self::populateTables($db);
             }
 
-        } catch (PDOException $e) {
+        }  $db = null; 
+          catch (PDOException $e) {
             die("Could not open database. " . $e -> getMessage());
         }
         return $db;
