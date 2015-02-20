@@ -9,10 +9,10 @@ include_once ('include/Logger.inc');
 class Db {
     public static function getDb() {
         try {
-   $dbname = 'dem3apkat0rsil';
-            $host = 'ec2-107-20-191-205.compute-1.amazonaws.com';
-            $username= 'bgfrrwicnefcce';
-            $password = 'D5XoyMffVemfkFRp8eb5TXjvor';
+   $dbname = 'd40oh58uoj0at';
+            $host = 'ec2-107-21-93-97.compute-1.amazonaws.com';
+            $username= ***REMOVED***;
+            $password = ***REMOVED***;
             // see if we need to create tables
             
             $db = new PDO("pgsql:host=$host; port=5432;dbname=$dbname;user=$username;password=$password");
