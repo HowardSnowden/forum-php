@@ -22,11 +22,11 @@ class Db {
 
             // force cascading deletes on foreign key constraints
             
-            $query = $db ->query("SELECT * FROM user");
-            if ($query == false){
-                $makeDb = true;
-            }
-        
+        //    $query = $db ->query("SELECT * FROM user");
+        //    if ($query == false){
+         //       $makeDb = true;
+           // }
+        $makeDb = true;
             if ($makeDb) {
                 self::makeTables($db);
                 self::populateTables($db);
