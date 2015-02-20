@@ -15,11 +15,12 @@ class Db {
             $password = 'D5XoyMffVemfkFRp8eb5TXjvor';
             // see if we need to create tables
             
-            $db = new PDO("pgsql:host=$host; port=5432;dbname=$dbname;user=$username;password=$password");
+            $db = new PDO("pgsql:host=$host; port=5432;dbname=$dbname;user=$username;password=$password", array(
+            PDO::ATTR_PERSISTENT => true));
 
             // force exceptions for better debugging.
             $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+            
             // force cascading deletes on foreign key constraints
             
         //    $query = $db ->query("SELECT * FROM user");
@@ -32,7 +33,7 @@ class Db {
                 self::populateTables($db);
             }
 
-        }  $db = null; 
+        }  
           catch (PDOException $e) {
             die("Could not open database. " . $e -> getMessage());
         }
