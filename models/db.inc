@@ -15,11 +15,10 @@ class Db {
             $password = 'D5XoyMffVemfkFRp8eb5TXjvor';
             // see if we need to create tables
             
-            $db = new PDO("pgsql:host=$host; port=5432;dbname=$dbname;user=$username;password=$password", array(
-            PDO::ATTR_PERSISTENT => true));
+            $db = new PDO("pgsql:host=$host; port=5432;dbname=$dbname;user=$username;password=$password");
 
             // force exceptions for better debugging.
-            $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION, PDO::ATTR_PERSISTENT=>TRUE);
             
             // force cascading deletes on foreign key constraints
             
