@@ -91,9 +91,10 @@ public function setUserId($user_id){
 	$st -> execute();
     
     $rows = $st -> fetchAll(PDO::FETCH_ASSOC);
+     $db=null;
     return self::fromRows($rows);
-}
-
+     
+ }
 static function findPostById($id){
   	$db=Db::getDb();
 	$st =$db->prepare("SELECT * FROM questions WHERE id = :id");
