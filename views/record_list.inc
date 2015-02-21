@@ -1,4 +1,4 @@
-%% app/views/header.html %% 
+%% /views/header.html %% 
 <h1>{{$title}}</h1>
 <h2>Recent Questions</h2>
 <!--is based on MVC-Template by Scott Sharkey (cs.franklin.edu/~sharkesc/webd236)-->
@@ -22,4 +22,4 @@
     [[ if (Authenticator::instance()->can('question_create')) : ]]
     <p><a href="@@forum/add@@">Add a question</a></p>
     [[ endif; ]]
-%% views/footer.html %% 
+%% /views/footer.html %% 
