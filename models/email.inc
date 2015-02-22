@@ -7,8 +7,8 @@ class Email {
     private static $smtpHost = "ssl://smtp.gmail.com";
     private static $smtpPort = 465;
     private static $smtpAuth = true;
-    private static $smtpUsername = 'therealdpyles@gmail.com';
-    private static $smtpPassword = '***REMOVED***';
+    private static $smtpUsername = 'phpemailaccess@gmail.com';
+    private static $smtpPassword = ***REMOVED***;
 
     private $smtp;
     private $recipients;
